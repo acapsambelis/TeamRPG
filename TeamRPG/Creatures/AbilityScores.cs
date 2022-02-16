@@ -1,8 +1,10 @@
-﻿
-/// <summary>
+﻿/// <summary>
+/// Ability score containment and arithmetic
 /// 
+/// Author: Alex Capsambelis
 /// </summary>
-namespace TeamRPG
+
+namespace TeamRPG.Creatures
 {
     /// <summary>
     /// Container for the ability scores for every creature
@@ -25,6 +27,11 @@ namespace TeamRPG
         private int prs;        // Presence
         private int chsa;       // Charisma
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        public AbilityScores() : this(10, 10, 10, 10, 10, 10, 10, 10) { }
+        
         /// <summary>
         /// Constructor, takes 8 ability scores
         /// and calculates the 4 derived scores
@@ -57,6 +64,10 @@ namespace TeamRPG
             this.chsa = ami + prs;
         }
 
+        /// <summary>
+        /// Override the ToString to print important data more readable
+        /// </summary>
+        /// <returns>String with formatted data</returns>
         public override string ToString()
         {
             return string.Format("STR: {0} - DEX: {1}\n  PHYS: {2}\n" +
