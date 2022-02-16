@@ -10,11 +10,11 @@ namespace TeamRPG
 {
     public class Driver
     {
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine(Die.D20.Roll());
-
-            Console.WriteLine(DieExtentions.RollCustom(5));
+            var c = new Creatures.Creature();
+            Console.WriteLine(c);
+            Console.ReadKey();
         }
     }
 }
