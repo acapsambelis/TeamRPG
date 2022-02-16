@@ -23,9 +23,9 @@ namespace TeamRPG.Creatures
         private int wis;        // Wisdom
         private int reas;       // Reason
 
-        private int ami;        // Amicability
+        private int all;        // Allure
         private int prs;        // Presence
-        private int chsa;       // Charisma
+        private int cham;       // Charm
 
         /// <summary>
         /// Default constructor
@@ -42,10 +42,10 @@ namespace TeamRPG.Creatures
         /// <param name="ctr">Concentration</param>
         /// <param name="itl">Intelligence</param>
         /// <param name="wis">Widsom</param>
-        /// <param name="ami">Amicability</param>
+        /// <param name="all">Allure</param>
         /// <param name="prs">Presence</param>
         public AbilityScores(int str, int dex, int con, int ctr,
-                             int itl, int wis, int ami, int prs)
+                             int itl, int wis, int all, int prs)
         {
             this.str = str;
             this.dex = dex;
@@ -59,9 +59,9 @@ namespace TeamRPG.Creatures
             this.wis = wis;
             this.reas = itl + wis;
 
-            this.ami = ami;
+            this.all = all;
             this.prs = prs;
-            this.chsa = ami + prs;
+            this.cham = all + prs;
         }
 
         /// <summary>
@@ -73,9 +73,9 @@ namespace TeamRPG.Creatures
             return string.Format("STR: {0} - DEX: {1}\n  PHYS: {2}\n" +
                    "CON: {3} - CTR: {4}\n  FORT: {5}\n" +
                    "ITL: {6} - WIS: {7}\n  REAS: {8}\n" +
-                   "AMI: {9} - PRS: {10}\n  CHSA: {11}\n",
+                   "ALL: {9} - PRS: {10}\n  CHAM: {11}\n",
                    str, dex, phys, con, ctr, fort,
-                   itl, wis, reas, ami, prs, chsa);
+                   itl, wis, reas, all, prs, cham);
         }
     }
 }
