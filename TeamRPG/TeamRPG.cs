@@ -13,11 +13,6 @@ namespace TeamRPG
         public static void Main(String[] args)
         {
             Console.WriteLine(Die.D20.Roll());
-            Console.WriteLine(Die.D20.Roll());
-            Console.WriteLine(Die.D20.Roll());
-            Console.WriteLine(Die.D20.Roll());
-            Console.WriteLine(Die.D20.Roll());
-            Console.WriteLine(Die.D20.Roll());
 
             Console.WriteLine(DieExtentions.RollCustom(5));
         }
